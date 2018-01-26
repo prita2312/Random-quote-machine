@@ -1,0 +1,87 @@
+<html>
+<head>
+	<title>Random quote machine</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		var quotes = [
+		{
+			"name": "Abdul Kalam",
+			"message": "Don’t take rest after your first victory because if you fail in second, more lips are waiting to say that your first victory was just luck.",
+			"clr": "#ff4000"
+		}, 
+		{
+			"name":"Mahatma Gandhi",
+			"message":"You must be the change you want to see in the world.",
+			"clr": "#ff8000"
+		},
+		{
+			"name": "Swami Vivekananda",
+			"message": "Arise, Awake and Stop not until the goal is reached.",
+			"clr": "#ffbf00"
+		},
+		{
+			"name": "Mother Theresa",
+			"message": "If you judge people, you have no time to love them.",
+			"clr": "#ffff00"
+		},
+		{
+			"name": "Gautama Buddha",
+			"message": "The mind is everything. What you think you become.",
+			"clr":"#bfff00"
+		},
+		{
+			"name": "Albert Einstein",
+			"message": "You can't blame gravity for falling in love.",
+			"clr":"#00ffff"
+		},
+		{
+			"name": "Benjamin Franklin",
+			"message": "Tell me and I forget. Teach me and I remember. Involve me and I learn.",
+			"clr":"#00bfff"
+		},
+		{
+			"name": "Walt Disney",
+			"message": "All our dreams can come true, if we have the courage to pursue them.",
+			"clr":"#0080ff"
+		},
+		{
+			"name": "George Bernard Shaw",
+			"message": "Life isn't about finding yourself. Life is about creating yourself.",
+			"clr": "#0040ff"
+		},
+		{
+			"name": "Socrates",
+			"message": "The only true wisdom is in knowing you know nothing.",
+			"clr": "#ff0080"
+		}
+		];
+
+		$(document).ready(function() {
+			$("#press").click(function() {
+				var num = Math.floor(Math.random()*10);
+				$("h3").html("\"" + quotes[num].message +"\"");
+				$("p").html("<em>- " + quotes[num].name +"</em>");
+				$("#quote-box").css("color", quotes[num].clr);
+			});
+
+			$("#twitter").click(function(){
+				window.location = "https://twitter.com/intent/tweet";
+			});
+		});
+
+	</script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="Random.css">
+</head>
+<body>
+	<h1 class="page-header">Random Quote Generator</h1>
+	<div id="quote-box">
+		<h3>Quote appears here</h3>
+		<p><em>- Said by</em></p>
+	</div>
+	<div id="btn-box" class="row">
+		<button class="btn col-md-6 btn-danger" id="press">Press for quote</button>
+		<button class="btn col-md-6 btn-primary" id="twitter">Post on twitter</button>
+	</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+#quote-box
+{
+  text-align: center;
+  margin-left: 300px;
+  margin-right: 300px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-style: dashed;
+  border-color: white;
+}
+#btn-box
+{
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 10px;
+}
+h1
+{
+  text-align: center;
+  color: white;
+}
+body
+{
+  background-color: black;
+  margin-left: 100px;
+  margin-right: 100px;
+}
